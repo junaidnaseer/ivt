@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="..\..\examples\ParticleFilterDemo\src\ParticleFilter3D.h" />
+    <ClInclude Include="..\..\examples\ParticleFilterDemo\src\ParticleFilter2D.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\examples\ParticleFilterDemo\src\main.cpp" />
+    <ClCompile Include="..\..\examples\ParticleFilterDemo\src\ParticleFilter2D.cpp" />
+    <ClCompile Include="..\..\examples\ParticleFilterDemo\src\ParticleFilter3D.cpp" />
+  </ItemGroup>
+</Project>

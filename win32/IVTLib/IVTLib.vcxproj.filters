@@ -1,0 +1,603 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{3d4c76c2-0e3a-4fd9-b391-58882a84a33e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Image">
+      <UniqueIdentifier>{faee2070-1c2b-4514-b46a-5461eb78c62e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{e8efa1dd-2248-42c9-ad63-a453c1605bba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VideoCapture">
+      <UniqueIdentifier>{3077b0e8-c2f1-4b17-a9d2-62baa8bf5103}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Color">
+      <UniqueIdentifier>{f6682b4d-756b-4599-9596-570a6ff83ecf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Calibration">
+      <UniqueIdentifier>{6a6142e1-bc26-4006-8182-2194bb87ff1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classification">
+      <UniqueIdentifier>{222f95cb-553e-499f-b2d8-537103759b7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contours">
+      <UniqueIdentifier>{cbed2a1c-939c-4325-8558-41e3bd2a1887}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataProcessing">
+      <UniqueIdentifier>{c4b592e0-94be-4fa5-8019-ee5c6216db48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataStructures">
+      <UniqueIdentifier>{9205c552-e9d2-415f-8850-a917d826207b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataStructures\KdTree">
+      <UniqueIdentifier>{53da8539-ac36-4070-bc18-db07a3de93d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features">
+      <UniqueIdentifier>{7c2248fb-84ff-42ae-8d91-2c8599ef0bd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\HarrisSIFTFeatures">
+      <UniqueIdentifier>{fbae7af7-c1db-415f-b46e-6bf424239d84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\PatchFeatures">
+      <UniqueIdentifier>{70488a25-4856-4408-8fce-111763e90b42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\SIFTFeatures">
+      <UniqueIdentifier>{a1e8e403-c4b2-4a11-9841-a3990093294a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Networking">
+      <UniqueIdentifier>{ef0633c2-922c-42ef-ab60-3e359824c75d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ObjectFinder">
+      <UniqueIdentifier>{8ed68440-5172-4ddc-9bba-f8cec68e7d5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ParticleFilter">
+      <UniqueIdentifier>{4cb977d1-404f-4d57-92b0-07c42ffc037d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Threading">
+      <UniqueIdentifier>{d3b37a31-4107-497d-80bd-02947d8adff1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tracking">
+      <UniqueIdentifier>{fa9c42af-96aa-4a2f-9586-f4e2e040523d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VideoAccess">
+      <UniqueIdentifier>{22dc62d2-2da4-4d2d-a77a-36777f77bcc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Visualizer">
+      <UniqueIdentifier>{5b334d5d-2bec-4b2b-94c0-6e115ce5618f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interfaces">
+      <UniqueIdentifier>{52926348-fabf-4d21-9054-aecfdf3914db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Structs">
+      <UniqueIdentifier>{37753fc5-ad38-45e3-a19f-a0d8bd200115}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\Helpers\helpers.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\VideoCapture\BitmapCapture.h">
+      <Filter>VideoCapture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Math\Constants.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Math\DoubleMatrix.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Math\DoubleVector.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Math\FloatMatrix.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Math\FloatVector.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Math\LinearAlgebra.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Math\Matd.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Math\Math2d.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Math\Math3d.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Math\Vecd.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Color\RGBColorModel.h">
+      <Filter>Color</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Helpers\PerformanceLib.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Helpers\OptimizedFunctions.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Helpers\OptimizedFunctionsList.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Helpers\BasicFileIO.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Calibration\Calibration.h">
+      <Filter>Calibration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Calibration\DLTCalibration.h">
+      <Filter>Calibration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Calibration\ExtrinsicParameterCalculator.h">
+      <Filter>Calibration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Calibration\Rectification.h">
+      <Filter>Calibration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Calibration\StereoCalibration.h">
+      <Filter>Calibration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Calibration\Undistortion.h">
+      <Filter>Calibration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Calibration\UndistortionSimple.h">
+      <Filter>Calibration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Classification\NearestNeighbor.h">
+      <Filter>Classification</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Color\ColorParameterSet.h">
+      <Filter>Color</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Contours\ContourHelper.h">
+      <Filter>Contours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\DataProcessing\RANSAC.h">
+      <Filter>DataProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\DataProcessing\MeanFilter.h">
+      <Filter>DataProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\DataProcessing\Normalizer.h">
+      <Filter>DataProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\DataStructures\DynamicArrayTemplatePointer.h">
+      <Filter>DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\DataStructures\DynamicArray.h">
+      <Filter>DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\DataStructures\DynamicArrayTemplate.h">
+      <Filter>DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\DataStructures\KdTree\KdUtils.h">
+      <Filter>DataStructures\KdTree</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\DataStructures\KdTree\KdPriorityQueue.h">
+      <Filter>DataStructures\KdTree</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\DataStructures\KdTree\KdStructs.h">
+      <Filter>DataStructures\KdTree</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\DataStructures\KdTree\KdTree.h">
+      <Filter>DataStructures\KdTree</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Features\FeatureSet.h">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Features\FeatureEntry.h">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Features\HarrisSIFTFeatures\HarrisSIFTFeatureCalculator.h">
+      <Filter>Features\HarrisSIFTFeatures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Features\PatchFeatures\PatchFeatureEntry.h">
+      <Filter>Features\PatchFeatures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Features\SIFTFeatures\SIFTFeatureEntry.h">
+      <Filter>Features\SIFTFeatures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Features\SIFTFeatures\SIFTFeatureCalculator.h">
+      <Filter>Features\SIFTFeatures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Helpers\Quicksort.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Helpers\Configuration.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Image\ByteImage.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Image\CornerSubpixel.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Image\FloatImage.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Image\ImageMapper.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Image\ImageProcessor.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Image\IntImage.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Image\PrimitivesDrawer.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Image\ShortImage.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Image\StereoMatcher.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Image\StereoVision.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Networking\VCNet.h">
+      <Filter>Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Networking\TCPSocket.h">
+      <Filter>Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ObjectFinder\ObjectFinderStereo.h">
+      <Filter>ObjectFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ObjectFinder\CompactRegionFilter.h">
+      <Filter>ObjectFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ObjectFinder\ObjectColorSegmenter.h">
+      <Filter>ObjectFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ObjectFinder\ObjectFinder.h">
+      <Filter>ObjectFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ParticleFilter\ParticleFilterFrameworkFloat.h">
+      <Filter>ParticleFilter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ParticleFilter\ParticleFilterFramework.h">
+      <Filter>ParticleFilter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Threading\Event.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Threading\Mutex.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Threading\Thread.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Threading\ThreadBase.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Threading\Threading.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Threading\WindowsThread.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Tracking\Tracker2d3d.h">
+      <Filter>Tracking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Tracking\ICP.h">
+      <Filter>Tracking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Tracking\KLTTracker.h">
+      <Filter>Tracking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Tracking\ObjectPose.h">
+      <Filter>Tracking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Tracking\POSIT.h">
+      <Filter>Tracking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Tracking\RAPiD.h">
+      <Filter>Tracking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\VideoCapture\VFWCapture.h">
+      <Filter>VideoCapture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\VideoCapture\BitmapSequenceCapture.h">
+      <Filter>VideoCapture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\VideoCapture\OpenGLCapture.h">
+      <Filter>VideoCapture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\VideoCapture\UncompressedAVICapture.h">
+      <Filter>VideoCapture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\VideoAccess\VideoReader.h">
+      <Filter>VideoAccess</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Visualizer\glext.h">
+      <Filter>Visualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Visualizer\OpenGLVisualizer.h">
+      <Filter>Visualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Visualizer\OpenGLVisualizerControl.h">
+      <Filter>Visualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Interfaces\WindowEventInterface.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Interfaces\ApplicationHandlerInterface.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Interfaces\ClassificatorInterface.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Interfaces\FeatureCalculatorInterface.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Interfaces\FilterInterface.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Interfaces\GUIInterface.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Interfaces\MainWindowEventInterface.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Interfaces\MainWindowInterface.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Interfaces\ObjectClassifierInterface.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Interfaces\ObjectEntryFilterInterface.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Interfaces\RegionFilterInterface.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Interfaces\RigidObjectTrackingInterface.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Interfaces\VideoCaptureInterface.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Structs\Structs.h">
+      <Filter>Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Structs\ObjectDefinitions.h">
+      <Filter>Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Color\Color.h">
+      <Filter>Color</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Image\BitmapFont.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Helpers\Timer.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Helpers\helpers.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\VideoCapture\BitmapCapture.cpp">
+      <Filter>VideoCapture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Math\DoubleMatrix.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Math\DoubleVector.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Math\FloatMatrix.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Math\FloatVector.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Math\LinearAlgebra.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Math\Matd.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Math\Math2d.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Math\Math3d.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Math\SVD.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Math\Vecd.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Color\RGBColorModel.cpp">
+      <Filter>Color</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Helpers\PerformanceLib.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Helpers\BasicFileIO.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Calibration\Calibration.cpp">
+      <Filter>Calibration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Calibration\DLTCalibration.cpp">
+      <Filter>Calibration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Calibration\ExtrinsicParameterCalculator.cpp">
+      <Filter>Calibration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Calibration\Rectification.cpp">
+      <Filter>Calibration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Calibration\StereoCalibration.cpp">
+      <Filter>Calibration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Calibration\Undistortion.cpp">
+      <Filter>Calibration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Calibration\UndistortionSimple.cpp">
+      <Filter>Calibration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Classification\NearestNeighbor.cpp">
+      <Filter>Classification</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Color\ColorParameterSet.cpp">
+      <Filter>Color</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Contours\ContourHelper.cpp">
+      <Filter>Contours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\DataProcessing\MeanFilter.cpp">
+      <Filter>DataProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\DataProcessing\Normalizer.cpp">
+      <Filter>DataProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\DataProcessing\RANSAC.cpp">
+      <Filter>DataProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\DataStructures\DynamicArray.cpp">
+      <Filter>DataStructures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\DataStructures\KdTree\KdTree.cpp">
+      <Filter>DataStructures\KdTree</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Features\FeatureSet.cpp">
+      <Filter>Features</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Features\HarrisSIFTFeatures\HarrisSIFTFeatureCalculator.cpp">
+      <Filter>Features\HarrisSIFTFeatures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Features\PatchFeatures\PatchFeatureEntry.cpp">
+      <Filter>Features\PatchFeatures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Features\SIFTFeatures\SIFTFeatureCalculator.cpp">
+      <Filter>Features\SIFTFeatures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Helpers\Configuration.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Helpers\Quicksort.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Image\ByteImage.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Image\CornerSubpixel.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Image\FloatImage.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Image\ImageMapper.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Image\ImageProcessor.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Image\IntImage.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Image\PrimitivesDrawer.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Image\ShortImage.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Image\StereoMatcher.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Image\StereoVision.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Networking\TCPSocket.cpp">
+      <Filter>Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ObjectFinder\CompactRegionFilter.cpp">
+      <Filter>ObjectFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ObjectFinder\ObjectColorSegmenter.cpp">
+      <Filter>ObjectFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ObjectFinder\ObjectFinder.cpp">
+      <Filter>ObjectFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ObjectFinder\ObjectFinderStereo.cpp">
+      <Filter>ObjectFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ParticleFilter\ParticleFilterFramework.cpp">
+      <Filter>ParticleFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ParticleFilter\ParticleFilterFrameworkFloat.cpp">
+      <Filter>ParticleFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Threading\Event.cpp">
+      <Filter>Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Threading\Mutex.cpp">
+      <Filter>Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Threading\Threading.cpp">
+      <Filter>Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Threading\WindowsThread.cpp">
+      <Filter>Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Tracking\ICP.cpp">
+      <Filter>Tracking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Tracking\KLTTracker.cpp">
+      <Filter>Tracking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Tracking\ObjectPose.cpp">
+      <Filter>Tracking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Tracking\POSIT.cpp">
+      <Filter>Tracking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Tracking\RAPiD.cpp">
+      <Filter>Tracking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Tracking\Tracker2d3d.cpp">
+      <Filter>Tracking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\VideoCapture\BitmapSequenceCapture.cpp">
+      <Filter>VideoCapture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\VideoCapture\OpenGLCapture.cpp">
+      <Filter>VideoCapture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\VideoCapture\UncompressedAVICapture.cpp">
+      <Filter>VideoCapture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\VideoCapture\VFWCapture.cpp">
+      <Filter>VideoCapture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\VideoAccess\VideoReader.cpp">
+      <Filter>VideoAccess</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Visualizer\OpenGLVisualizer.cpp">
+      <Filter>Visualizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Visualizer\OpenGLVisualizerControl.cpp">
+      <Filter>Visualizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Color\Color.cpp">
+      <Filter>Color</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Image\BitmapFont.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Helpers\Timer.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

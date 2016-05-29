@@ -1,0 +1,26 @@
+var helpers_8h =
+[
+    [ "MY_MAX", "helpers_8h.html#ac0a25c397fc5134ad22c456587baf7a0", null ],
+    [ "MY_MIN", "helpers_8h.html#a384fcacf0b6110dc203b9944c94e2399", null ],
+    [ "aligned_free", "helpers_8h.html#a274dd8714485eed9c9328973d44ec5dc", null ],
+    [ "aligned_malloc", "helpers_8h.html#a6496495e023e8e9eacc3bc70ea17a1b9", null ],
+    [ "gaussian_random", "helpers_8h.html#a83d6ec6b828a58aadf58db8d8e6df30c", null ],
+    [ "gaussian_random_float", "helpers_8h.html#a15d937e643d618cdf97413d593bed570", null ],
+    [ "get_timer_value", "helpers_8h.html#aac0c37cb4d0674256db7b6e915ce4dd1", null ],
+    [ "get_timer_value", "helpers_8h.html#a7fe4cec77191993a3a54af4edb2380c8", null ],
+    [ "GetVersionIVT", "helpers_8h.html#abcf50c2f9134fe80d9d705a2b66f0c0d", null ],
+    [ "hsv2rgb", "helpers_8h.html#ad148177484e56f740887b959aaff643b", null ],
+    [ "invert_byte_order_float", "helpers_8h.html#a8ef127d48840e028918db2b37ab19299", null ],
+    [ "invert_byte_order_int", "helpers_8h.html#a32817a6314d78e017438c9b55e80ab6c", null ],
+    [ "invert_byte_order_int", "helpers_8h.html#a710e9dfd196b3c014f0b1b5e00c0c683", null ],
+    [ "invert_byte_order_long", "helpers_8h.html#a850d38b09e8739189620b6abe7d34ab5", null ],
+    [ "invert_byte_order_long", "helpers_8h.html#aa2e5c3623931157d3146bbf273fb0264", null ],
+    [ "invert_byte_order_short", "helpers_8h.html#a7ab7ea79f492d0d7e4923154b1520dd2", null ],
+    [ "invert_byte_order_short", "helpers_8h.html#a7f0fb596297ff95da7d4388596b41756", null ],
+    [ "my_round", "helpers_8h.html#a8d0f2afe26bf02570cab870c25a542ed", null ],
+    [ "my_round", "helpers_8h.html#a85439f05fab7c31a9c27f3e04aac6b04", null ],
+    [ "rgb2hsv", "helpers_8h.html#add75109df42f3d0986d2d75541619ced", null ],
+    [ "sleep_ms", "helpers_8h.html#ad9c8de4d239b88cc80ab8e276600e068", null ],
+    [ "uniform_random", "helpers_8h.html#a7e672d4953f48def3e43fdf7934ac158", null ],
+    [ "uniform_random_float", "helpers_8h.html#afac45ccac646aba66b201a0465d0b40b", null ]
+];

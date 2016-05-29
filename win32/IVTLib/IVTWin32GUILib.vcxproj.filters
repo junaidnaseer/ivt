@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="..\..\src\gui\GUIFactory.h" />
+    <ClInclude Include="..\..\src\gui\GLContext.h" />
+    <ClInclude Include="..\..\src\gui\win32\Win32MainWindow.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\gui\win32\Win32ApplicationHandler.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\gui\GLContext.cpp" />
+    <ClCompile Include="..\..\src\gui\GUIFactory.cpp" />
+    <ClCompile Include="..\..\src\gui\win32\Win32ApplicationHandler.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\gui\win32\Win32MainWindow.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="win32">
+      <UniqueIdentifier>{5819f40d-0ab0-4a5f-a76e-e0dc7b473720}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

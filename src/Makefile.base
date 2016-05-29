@@ -1,0 +1,279 @@
+# Used compiler
+COMPILER = g++
+
+# These settings might be useful, e.g. for setting global paths
+INCPATHS_BASE = -I../../src
+LIBPATHS_BASE =
+FLAGS_BASE = -O3 -fpic
+
+# Flags for turning on/off support for integrated libraries
+# Note: Flags for GUI support can be found within the following if-statement
+USE_OPENGL = 0
+USE_OPENCV = 0
+USE_OPENCV_HIGHGUI = 0
+# Note: If USE_OPEN_INVENTOR = 1 is set, also either USE_QT3 = 1 or USE_QT4 = 1 (for SoQt) must be set in the following if-statement
+USE_OPEN_INVENTOR = 0
+
+# Keyetech Performance Primitives (KPP, www.keyetech.de) automatic integration
+# If LOAD_KPP = 1 is set, the KPP are loaded automatically at program start, if the KPP are available
+LOAD_KPP = 0
+
+ifeq ($(shell uname), Darwin)
+	# These settings are for Mac OS X
+
+	# GUI
+	# IMPORTANT: Only one of USE_QTGUI, USE_GTKGUI, USE_COCOACUI can be set to 1 at a time.
+	# if USE_QTGUI = 1 is set, then USE_QT3 = 1 or USE_QT4 = 1 must be set as well.
+	# USE_QT3 = 1 and USE_QT4 = 1 may not be set at the same time.
+	USE_QT3 = 0
+	USE_QT4 = 0
+	USE_QTGUI = 0
+	USE_GTKGUI = 0
+	USE_COCOAGUI = 0
+
+	USE_NETWORKING = 0
+
+	# capture
+	USE_QUICKTIME = 0
+else
+	# This settings are e.g. for Linux
+
+	# GUI
+	# IMPORTANT: Only one of USE_QTGUI, USE_GTKGUI, USE_COCOACUI can be set to 1 at a time.
+	# if USE_QTGUI = 1 is set, then USE_QT3 = 1 or USE_QT4 = 1 must be set as well.
+	# USE_QT3 = 1 and USE_QT4 = 1 may not be set at the same time.
+	USE_QT3 = 0
+	USE_QT4 = 0
+	USE_QTGUI = 0
+	USE_GTKGUI = 1
+	USE_COCOAGUI = 0
+
+	USE_NETWORKING = 0
+
+	# Use either LIBDC1394 or LIBDC1394_V2 (or none). If activating both CLinux1394Capture2 will crash with floating point exception.
+	USE_LIBDC1394 = 0
+	USE_LIBDC1394_V2 = 0
+	USE_V4L = 0
+	USE_UNICAP = 0
+	USE_SVS = 0
+endif
+
+# These settings usually shouldn't be modified
+LDFLAGS_BASE =
+GUI_FLAGS_BASE =
+QT_FLAGS_BASE =
+GTK_FLAGS_BASE =
+LIBDC_FLAGS_BASE =
+OPENCV_FLAGS_BASE =
+
+
+ifeq ($(USE_QT3), 1)
+	USE_QT = 1
+endif
+ifeq ($(USE_QT4), 1)
+	USE_QT = 1
+endif
+
+ifeq ($(USE_OPENCV), 1)
+        LIBS_BASE += -livtopencv
+endif
+
+ifeq ($(USE_QT), 1)
+        LIBS_BASE += -livtgui
+        ifeq ($(USE_QTGUI), 1)
+                GUI_FLAGS_BASE += -DUSE_QTGUI
+        endif
+else
+        ifeq ($(USE_OPENCV_HIGHGUI), 1)
+                LIBS_BASE += -livtgui
+        else
+                ifeq ($(USE_COCOAGUI), 1)
+                        LIBS_BASE += -livtgui
+                else
+                        ifeq ($(USE_GTKGUI), 1)
+                                LIBS_BASE += -livtgui
+                        endif
+                endif
+        endif
+endif
+
+ifeq ($(USE_LIBDC1394), 1)
+        LIBS_BASE += -livtvideocapture
+else
+        ifeq ($(USE_LIBDC1394_V2), 1)
+                LIBS_BASE += -livtvideocapture
+        else
+                ifeq ($(USE_UNICAP), 1)
+                        LIBS_BASE += -livtvideocapture
+                else
+                        ifeq ($(USE_SVS), 1)
+                                LIBS_BASE += -livtvideocapture
+                        else
+                                ifeq ($(USE_QUICKTIME), 1)
+                                        LIBS_BASE += -livtvideocapture
+                                else
+                                        ifeq ($(USE_OPENCV_HIGHGUI), 1)
+                                                LIBS_BASE += -livtvideocapture
+                                        else
+                                                ifeq ($(USE_V4L), 1)
+                                                        LIBS_BASE += -livtvideocapture
+                                                endif
+                                        endif
+                                endif
+                        endif
+                endif
+        endif
+endif
+
+LIBS_BASE += -livt
+
+ifeq ($(shell uname), Darwin)
+#
+#	MAC OS X
+#
+	ifeq ($(USE_OPENGL), 1)
+		INCPATHS_BASE += -I/System/Library/Frameworks/OpenGL.framework/Headers
+		LIBPATHS_BASE += 
+		LIBS_BASE += -framework OpenGL
+		GUI_FLAGS_BASE += -DUSE_OPENGL
+	endif
+	ifeq ($(USE_QT3), 1)
+		MOC_PATH = /Developer/qt/bin/moc
+		INCPATHS_BASE += -I/Developer/qt/include
+		LIBPATHS_BASE += -L/Developer/qt/lib
+		LIBS_BASE += -lqt-mt
+		
+		ifeq ($(USE_QTGUI), 1)
+			GUI_FLAGS_BASE += -DOSX_QTGUI
+		endif
+	endif
+	ifeq ($(USE_QT4), 1)
+		MOC_PATH = /usr/bin/moc
+		INCPATHS_BASE += -I/Library/Frameworks/QtCore.framework/Versions/4/Headers/ -I/Library/Frameworks/QtGui.framework/Versions/4/Headers/ -I/Library/Frameworks/QtOpenGL.framework/Versions/4/Headers/
+		LIBPATHS_BASE += 
+		LIBS_BASE += -framework QtCore -framework QtGui -framework QtOpenGL
+		
+		ifeq ($(USE_QTGUI), 1)
+			GUI_FLAGS_BASE += -DOSX_QTGUI
+		endif
+	endif
+	ifeq ($(USE_OPENCV_HIGHGUI), 1)
+		LIBS_BASE += -lhighgui
+	endif
+	ifeq ($(USE_QUICKTIME), 1)
+		LIBS_BASE += -framework QuickTime -framework Carbon
+	endif
+	ifeq ($(USE_OPEN_INVENTOR), 1)
+		LIBS_BASE += -framework Inventor -framework SoQT
+	endif
+	ifeq ($(USE_OPENCV), 1)
+		INCPATHS_BASE += -I/usr/local/include/opencv
+		LIBS_BASE += -lcxcore -lcv -lcvaux
+	endif
+	ifeq ($(USE_COCOAGUI), 1)
+		GUI_FLAGS_BASE += -DUSE_COCOAGUI
+		LIBS_BASE += -framework Cocoa
+		LDFLAGS_BASE += -lobjc
+	endif
+
+	LIBPATHS_BASE += -L../../lib/macos	
+else 
+#
+#	LINUX
+#
+	ifeq ($(USE_OPENGL), 1)
+		LIBS_BASE += -lGL -lGLU
+		GUI_FLAGS_BASE += -DUSE_OPENGL
+	endif
+	ifeq ($(USE_QT3), 1)
+		MOC_PATH = /usr/bin/moc-qt3
+		ifeq ($(shell pkg-config --exists qt-mt && echo ok), ok)
+			INCPATHS_BASE += $(shell pkg-config --cflags-only-I qt-mt)
+			QT_FLAGS_BASE += $(shell pkg-config --cflags-only-other qt-mt)
+			LIBPATHS_BASE += $(shell pkg-config --libs-only-L qt-mt)
+			LIBS_BASE += $(shell pkg-config --libs-only-l qt-mt)
+		else
+			INCPATHS_BASE += -I/usr/include/qt3
+			LIBPATHS_BASE += -L/usr/lib/qt3/lib
+			LIBS_BASE += -lqt-mt
+		endif
+	endif
+	ifeq ($(USE_QT4), 1)
+		MOC_PATH = /usr/bin/moc-qt4
+		ifeq ($(shell pkg-config --exists QtCore QtGui QtOpenGL && echo ok), ok)
+			QT_FLAGS_BASE += $(shell pkg-config --cflags-only-other QtCore QtGui)
+			LIBPATHS_BASE += $(shell pkg-config --libs-only-L QtCore QtGui)
+			ifeq ($(USE_OPENGL), 1)
+				INCPATHS_BASE += $(shell pkg-config --cflags-only-I QtCore QtGui QtOpenGL)
+				LIBS_BASE += $(shell pkg-config --libs-only-l QtCore QtGui QtOpenGL)
+			else
+				INCPATHS_BASE += $(shell pkg-config --cflags-only-I QtCore QtGui)
+				LIBS_BASE += $(shell pkg-config --libs-only-l QtCore QtGui)
+			endif
+		else
+			INCPATHS_BASE += -I/usr/include/qt4 -I/usr/include/qt4/Qt -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui
+			LIBPATHS_BASE += -L/usr/share/qt4/lib
+			LIBS_BASE += -lQtCore -lQtGui
+			ifeq ($(USE_OPENGL), 1)
+				LIBS_BASE += -lQtOpenGL
+			endif
+		endif
+	endif
+	ifeq ($(USE_GTKGUI), 1)
+		GUI_FLAGS_BASE += -DUSE_GTKGUI
+		ifeq ($(shell pkg-config --exists gtk+-2.0 && echo ok), ok)
+			INCPATHS_BASE += $(shell pkg-config --cflags-only-I gtk+-2.0)
+			QT_FLAGS_BASE += $(shell pkg-config --cflags-only-other gtk+-2.0)
+			LIBPATHS_BASE += $(shell pkg-config --libs-only-L gtk+-2.0)
+			LIBS_BASE += $(shell pkg-config --libs-only-l gtk+-2.0)
+		else
+			INCPATHS_BASE += -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include
+			LIBPATHS_BASE += -L/usr/lib
+			LIBS_BASE += -lgobject-2.0 -lgmodule-2.0 -ldl -lglib-2.0
+		endif
+		GTK_FLAGS_BASE += $(shell pkg-config --cflags --libs gtk+-2.0)
+	endif
+	ifeq ($(USE_OPENCV_HIGHGUI), 1)
+		LIBS_BASE += -lhighgui
+	endif
+	ifeq ($(USE_LIBDC1394), 1)
+		ifeq ($(shell pkg-config --exists libdc1394 libraw1394 && echo ok), ok)
+			INCPATHS_BASE += $(shell pkg-config --cflags-only-I libdc1394 libraw1394)
+			LIBDC_FLAGS_BASE += $(shell pkg-config --cflags-only-other libdc1394 libraw1394)
+			LIBPATHS_BASE += $(shell pkg-config --libs-only-L libdc1394 libraw1394)
+			LIBS_BASE += $(shell pkg-config --libs-only-l libdc1394 libraw1394)
+		else
+			LIBS_BASE += -lraw1394 -ldc1394_control
+		endif
+	endif
+	ifeq ($(USE_LIBDC1394_V2), 1)
+		LIBS_BASE += -lraw1394 -ldc1394
+	endif
+	ifeq ($(USE_SVS), 1)
+		INCPATHS_BASE += -I/usr/local/lib/svs/src
+		LIBPATHS_BASE += -L/usr/local/lib/svs/bin
+		LIBS_BASE += -lsvs -lsvscalc -lsvscap
+	endif
+	ifeq ($(USE_UNICAP), 1)
+		INCPATHS_BASE += -I/usr/include/unicap
+		LIBS_BASE += -lunicap
+	endif
+	ifeq ($(USE_OPEN_INVENTOR), 1)
+		INCPATHS_BASE += -I/usr/include/Inventor
+		LIBS_BASE += -lCoin -lSoQt
+	endif
+	ifeq ($(USE_OPENCV), 1)
+		ifeq ($(shell pkg-config --exists opencv && echo ok), ok)
+			INCPATHS_BASE += $(shell pkg-config --cflags-only-I opencv)
+			OPENCV_FLAGS_BASE += $(shell pkg-config --cflags-only-other opencv)
+			LIBPATHS_BASE += $(shell pkg-config --libs-only-L opencv)
+			LIBS_BASE += $(shell pkg-config --libs-only-l opencv)
+		else
+			INCPATHS_BASE += -I/usr/include/opencv
+			LIBS_BASE += -lcxcore -lcv -lcvaux
+		endif
+	endif
+	
+	LIBPATHS_BASE += -L../../lib/linux
+endif
+

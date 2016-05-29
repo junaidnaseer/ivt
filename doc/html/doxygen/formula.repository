@@ -1,0 +1,81 @@
+\form#0:$\left(\begin{array}{c} u\\ v\\ \end{array}\right)= \left(\begin{array}{c} c_x\\ c_y\\ \end{array}\right)+\frac{1}{z_c} \left(\begin{array}{c} f_x\,x_c\\ f_y\,y_c\\ \end{array}\right)$
+\form#1:${\bf x}_c = R \cdot {\bf x}_w + {\bf t}$
+\form#2:${\bf x}_w$
+\form#3:${\bf x}_c$
+\form#4:$x_n = \frac{u-c_x}{f_x}$
+\form#5:$y_n = \frac{v-c_y}{f_y}$
+\form#6:$r = \sqrt{x_n^2 + y_n^2}$
+\form#7:$\left(\begin{array}{c} x_d\\ y_d\\ \end{array}\right) =(1+d_1r^2+d_2r^4) \left(\begin{array}{c} x_n\\ y_n\\ \end{array}\right)+ \left(\begin{array}{c} d_3(2x_ny_n)+d_4(r^2+2x_n^2)\\ d_3(r^2+2y_n^2)+d_4(2x_ny_n)\\ \end{array}\right)$
+\form#8:$\left(\begin{array}{c} u_d\\ v_d\\ \end{array}\right)= \left(\begin{array}{c} c_x\\ c_y\\ \end{array}\right)+ \left(\begin{array}{c} x_d \cdot f_x\\ y_d \cdot f_y\\ \end{array}\right)$
+\form#9:$K = \left(\begin{array}{ccc} f_x & 0 & c_x\\ 0 & f_y & c_y\\ 0 & 0 & 1 \end{array}\right)$
+\form#10:$P = \left(K \cdot R | K \cdot {\bf t}\right)$
+\form#11:${\bf x}_w = R^{-1} \cdot {\bf x}_c- R^{-1}{\bf t}$
+\form#12:$R^{-1}$
+\form#13:${\bf x}_w = R^{-1} \cdot {\bf x}_c - R^{-1}{\bf t}$
+\form#14:$-R^{-1}{\bf t}$
+\form#15:$R_{{\rm left}} = R_{{\rm right}} = I$
+\form#16:${\bf t}{{\rm left}} = (0,\,0,\,0)^T,\ {\bf t}{{\rm right}} = (-100,\,0,\,0)^T$
+\form#17:$R_{{\rm left}} = I$
+\form#18:${\bf t}{{\rm left}} = (0,\,0,\,0)^T$
+\form#19:$n \in \{1,\,2\}$
+\form#20:${\bf l} = (l_1,\,l_2\,l_3)^T$
+\form#21:$l_1 \cdot u + l_2 \cdot v + l3 = 0$
+\form#22:$(l_1,\,l_2)^T$
+\form#23:$v = m \cdot u + c$
+\form#24:$P = \left(H \cdot K \cdot R | H \cdot K \cdot {\bf t}\right)$
+\form#25:$ \sigma^2 $
+\form#26:$ {\rm nKernelSize} \geq \lfloor 2\sigma \rfloor \cdot 2 + 1 $
+\form#27:$ n \geq \lfloor 2\sigma \rfloor \cdot 2 + 1 $
+\form#28:$ \sigma^2 < 1.5^2 $
+\form#29:$ \sigma \approx 0.85 $
+\form#30:$ \sigma^2 \approx 0.85^2 $
+\form#31:$ \frac{1}{16}\left(\begin{array}{ccc} 1 & 2 & 1\\ 2 & 4 & 2\\ 1 & 2 & 1\\ \end{array}\right) $
+\form#32:$ \sigma \approx 0.9 $
+\form#33:$ \sigma^2 \approx 0.9^2 $
+\form#34:$ \frac{1}{256}\left(\begin{array}{ccccc} 1 & 4 & 6 & 4 & 1\\ 4 & 16 & 24 & 16 & 4\\ 6 & 24 & 36 & 24 & 6\\ 4 & 16 & 24 & 16 & 4\\ 1 & 4 & 6 & 4 & 1 \end{array}\right) $
+\form#35:$ \left( \begin{array}{ccc} 1 & 0 & -1 \\ \end{array} \right) $
+\form#36:$ \left( \begin{array}{c} 1 \\ 0 \\ -1 \\ \end{array}\right) $
+\form#37:$ \left(\begin{array}{ccc} -1 & 0 & 1\\ -2 & 0 & 2\\ -1 & 0 & 1\\ \end{array}\right) $
+\form#38:$ \left(\begin{array}{ccc} -1 & -2 & -1\\ 0 & 0 & 0\\ 1 & 2 & 1\\ \end{array}\right) $
+\form#39:$ \left(\begin{array}{ccc} -1 & 0 & 1\\ -1 & 0 & 1\\ -1 & 0 & 1\\ \end{array}\right) $
+\form#40:$ \left(\begin{array}{ccc} -1 & -1 & -1\\ 0 & 0 & 0\\ 1 & 1 & 1\\ \end{array}\right) $
+\form#41:$ \left(\begin{array}{ccc} 0 & 1 & 0 \\ 1 & -4 & 1 \\ 0 & 1 & 0 \\ \end{array}\right) $
+\form#42:$ \left(\begin{array}{ccc} 1 & 1 & 1 \\ 1 & -8 & 1 \\ 1 & 1 & 1 \\ \end{array}\right) $
+\form#43:$ I_g(x,y) = \max(|I(x+1,y) - I(x,y)|, |I(x,y+1)-I(x,y)|)$
+\form#44:$H_a$
+\form#45:$I_{out}(x, y) = \frac{255}{n} \cdot H_a(I_{in}(x, y))$
+\form#46:$ \left( \begin{array}{c} u' s \\ v' s \\ s \end{array} \right) = \left( \begin{array}{ccc} a_1 & a_2 & a_3 \\ a_4 & a_5 & a_6 \\ a_7 & a_8 & a_9 \end{array} \right) \cdot \left( \begin{array}{c} u \\ v \\ 1 \end{array} \right) $
+\form#47:$ a_9 = 1 $
+\form#48:$a_1, \ldots, a_8$
+\form#49:$ f_{+}(x) = exp(-\frac{1}{2}(x - \bar x)^T C^{-1} (x - \bar x)) $
+\form#50:$ c = det(C) - \kappa \cdot {trace(C)}^2 $
+\form#51:$ \kappa = 0.04 $
+\form#52:$ r = u \cdot cos(\theta) + v \cdot sin(\theta) $
+\form#53:$\theta$
+\form#54:$ (\theta, r) $
+\form#55:$r$
+\form#56:$ u = u_m + r \cdot cos(\theta) $
+\form#57:$ v = v_m + r \cdot sin(\theta) $
+\form#58:$(u_m, v_m, r)$
+\form#59:$u_m$
+\form#60:$v_m$
+\form#61:$ (u_m, v_m, r) $
+\form#62:$ {\rm IntegralImage}_{x, y} = \sum_{i=0}^x \sum_{j=0}^y I_{i, j} $
+\form#63:$ {\rm SummedAreaTable}_{x, y} = \sum_{i=0}^x \sum_{j=0}^y I_{i, j} $
+\form#64:$ \sum_{i=min_x}^{max_x}\sum_{j=min_y}^{max_y} I_{i, j} $
+\form#65:$I$
+\form#66:$ {\rm BinarizedSummedAreaTable}_{x, y} = \sum_{i=0}^x \sum_{j=0}^y min(1, I_{i, j}) $
+\form#67:$r = x\cdot\cos\theta + y\cdot\sin\theta$
+\form#68:$c = x \cdot n_x + y \cdot n_y$
+\form#69:$ \left( \begin{array}{cccccc} u_1 & v_1 & 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & u_1 & v_1 & 1 \\ \vdots & \vdots & \vdots & \vdots & \vdots & \vdots \\ u_n & v_n & 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & u_n & v_n & 1 \end{array} \right) \left( \begin{array}{c} a_1 \\ a_2 \\ a_3 \\ a_4 \\ a_5 \\ a_6 \end{array} \right) = \left( \begin{array}{c} u_1' \\ v_1' \\ \vdots \\ u_n' \\ v_n' \end{array} \right) $
+\form#70:$ \left( \begin{array}{cccccccc} u_1 & v_1 & 1 & 0 & 0 & 0 & -u_1 u_1' & -v_1 u_1 ' \\ 0 & 0 & 0 & u_1 & v_1 & 1 & -u_1 v_1' & -v_1 v_1' \\ \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots \\ u_n & v_n & 1 & 0 & 0 & 0 & -u_n u_n' & -v_n u_n' \\ 0 & 0 & 0 & u_n & v_n & 1 & -u_n v_n' & -v_n v_n' \end{array} \right) \left( \begin{array}{c} a_1 \\ a_2 \\ a_3 \\ a_4 \\ a_5 \\ a_6 \\ a_7 \\ a_8 \end{array} \right) = \left( \begin{array}{c} u_1' \\ v_1' \\ \vdots \\ u_n' \\ v_n' \end{array} \right) $
+\form#71:$\left(\begin{array}{c} x\\ y\\ \end{array}\right)$
+\form#72:$\left(\begin{array}{cc} r_1 & r_2\\ r_3 & r_4\\ \end{array}\right)$
+\form#73:$\left(\begin{array}{c} x\\ y\\ z\\ \end{array}\right)$
+\form#74:$\left(\begin{array}{ccc} r_1 & r_2 & r_3\\ r_4 & r_5 & r_6\\ r_7 & r_8 & r_9\\ \end{array}\right)$
+\form#75:$\vec{n} \cdot (\vec{x} - \vec{a}) = \vec{n} \cdot \vec{x} - \vec{n} \cdot \vec{a} = \vec{n} \cdot \vec{x} + c$
+\form#76:$\vec{x} = \vec{a} + r \cdot \vec{u},\ \ r \in R$
+\form#77:$\vec{x}$
+\form#78:$\vec{a}$
+\form#79:$\vec{u}$
+\form#80:$\vec{n}$

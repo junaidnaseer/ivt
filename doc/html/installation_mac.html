@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>IVT - Integrating Vision Toolkit - Installation</title>
+	<meta http-equiv="Content-Language" content="English" />
+	<meta name="Robots" content="index,follow" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+</head>
+<body>
+
+<div id="wrap">
+
+	<div id="top">
+				<div class="rights">	</div>
+				<div id="search">
+						
+					</div>
+				<div class="lefts">
+					<h1>IVT - Installation</h1>
+					<h2>Integrating Vision Toolkit</h2>
+				</div>
+	</div>
+	
+	<div id="topmenu">
+				<div class="rights"></div>
+				<div class="lefts">
+					<ul>
+						<li><a href="index.html" title="home">HOME</a></li>
+						<li><a href="installation.html" title="Installation">INSTALLATION</a></li>
+						<li><a href="doxygen/index.html" title="Documentation">DOCUMENTATION</a></li>
+						<li><a href="examples.html" title="Examples">EXAMPLES</a></li>
+						<li><a href="book.html" title="Book">BOOK</a></li>
+						<li><a href="highspeed.html" title="Highspeed">HIGHSPEED</a></li>
+						<li><a href="services.html" title="Services">SERVICES / SUPPORT</a></li>
+						<li><a href="contact.html" title="Contact">CONTACT</a></li>
+						<li><a href="about.html" title="About">ABOUT</a></li>
+					</ul>
+				</div>
+	</div>
+
+	<div class="section">
+		This tutorial describes the setup of a ready-to-use environment for programming with the IVT library under Mac OS X.<br /><br />
+
+		<table border="0" width="100%">
+			<colgroup>
+				<col width="200" />
+				<col width="*" />
+			</colgroup>
+			<tr>
+				<td>
+					<img src="images/apple_logo.png" alt="Apple Logo" />
+				</td>
+				<td>
+					<ol>
+						<li><a href="#mac_ivt">Setting up IVT</a></li>
+					</ol>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="main_full">
+		<div class="leftside_full">
+			<a name="mac_ivt"></a>
+			<h2>1. Setting up IVT</h2><br />
+			<h4>1.1. Downloading the IVT</h4>
+				<p>
+					Download the newest version of the IVT, e.g. <code>ivt-1.3.7.zip</code>, at <a href="http://sourceforge.net/projects/ivt/">http://sourceforge.net/projects/ivt/</a> in the download area.
+				</p>
+				<br />
+
+			<h4>1.2. Unpacking</h4>
+				<p>
+					In a console window, change to the directory of the downloaded archive and then run the command <code>unzip ivt-1.3.5.zip</code>. After unpacking, the directory <code>IVT</code> should exist in the current directory.
+				</p>
+				<br />
+
+			<h4>1.3. Configuration</h4>
+				<p>
+				The IVT offers the possibility of configuring the library before building it. This configuration takes place in the file <code>IVT/src/Makefile.base</code>. In order to change the default settings, the file <code>Makefile.base</code> must be opened and edited with a text editor (e.g. vim). In the following, the most important configuration options available under Mac OS X are listed. These options are configuration variables, which can be set either to 1 or  0. In order to integrate or exclude certain parts of the IVT library, the appropriate configuration variable must be set to 1 for integration and to 0 for exclusion.<br />
+				</p>
+				<ul style="margin:17px">
+					<li>
+						<b>USE_COCOAGUI</b><br />
+						The IVT library implements an own multi-platform GUI toolkit, which is used by the example applications. Under Mac OS X, a Cocoa implementation is available, which can be activated with this flag. When setting USE_COCOAGUI = 1, then USE_QTGUI = 0 must be set.
+					</li>
+					<li>
+						<b>USE_OPENGL</b><br />
+						The IVT library allows easy access to OpenGL and GLU. The GUI toolkit of the IVT allows the creation of GL widgets. Furthermore, the class <code>COpenGLVisualizer</code> sets up the projection model for a given instance of the class <code>CCalibration</code>.
+					</li>
+					<li>
+						<b>USE_QUICKTIME</b><br />
+						The IVT library implements a Quicktime video capture module with the class <code>CQuicktimeCapture</code>.
+					</li>
+					<li>
+						<b>USE_OPENCV</b><br />
+						The IVT library optionally integrates calls to the OpenCV library. The file names of the source files implementing encapsulated calls to the OpenCV have the ending <code>CV.h</code> and <code>CV.cpp</code>, respectively.
+					</li>
+					<li>
+						<b>USE_OPENCV_HIGHGUI</b><br />
+						HighGUI is part of the OpenCV library. It is needed for the optional IVT classes <code>CCVCamCapture</code>, <code>COpenCVCapture</code>, <code>CVideoWriterCV</code>, <code>CHaarClassifierCV</code>, <code>COpenCVApplicationHandler</code>, <code>COpenCVWindow</code> and the namespace <code>ImageAcessCV</code>.
+					</li>
+				</ul>
+				<p>
+					Apart from these variables, the directory paths to include and library files as well as the file names of the libraries can be changed in the lower part of the file. The pre-configured paths usually correspond to the default installation paths. Modifying the paths is only recommended, if problems arise with the default paths. For manual adjustment of the paths, a short explanation of the appropriate variables is given in the following:
+				</p>
+				<ul style="margin:17px">
+					<li>
+						<b>INCPATHS_BASE</b><br />
+						Contains all directory paths to included files. Adding a path takes place by using the operator += and adding the path with the leading parameter -I. For example INCPATHS_BASE += -I/usr/X11R6/include
+					</li>
+					<li>
+						<b>LIBPATHS_BASE</b><br />
+						Contains all directory paths to library files. Adding a path takes place by using the operator += and adding the path with the leading parameter -L. For example LIBPATHS_BASE += -L/usr/X11R6/lib
+					</li>
+					<li>
+						<b>LIBS_BASE</b><br />
+						Contains all file names of the libraries. Adding a file name takes place by using the operator += and adding the file name with the leading parameter -l. For example LIBS_BASE += -lGL -lGLU
+					</li>
+				</ul>
+			
+			<h4>1.4. Building the IVT libraries</h4>
+				<p>
+				The libraries are built by running the command <code>make</code> in the directory <code>IVT/src</code>. If after having built the IVT library once, modifications are made to the IVT files located in <code>IVT/src</code>, it is recommended to run the command <code>make clean</code> before running the command <code>make</code>, in order to enforce a complete new build process.
+				</p>
+				<br />
+			
+			<h4>1.5. Example application</h4>
+				<p>
+				For checking the installation, and as an introduction to programming with the IVT, the most simple example application is SimpleApp. SimpleApp doesn't use a GUI and thus doesn't require Qt or any other libraries to be installed. It is found in <code>IVT/examples/SimpleApp</code>. After changing to the directory <code>SimpleApp</code>, an executable file with the name <code>simpleapp</code> is created by running the command <code>make</code>. If the application is started with<br/>
+				<code>./simpleapp ../../files/scene_left.bmp</code>,<br/>
+				then a file called <code>output.bmp</code> is produced in the same directory. There are numerous further example applications in the directory <code>IVT/examples</code>, with which the features of the IVT can be tested and learned. For checking Qt support, e.g. the example application in <code>IVT/examples/FilterDemo</code> can be used.
+				</p>
+				<br /><br />
+		</div>
+	</div>
+	
+	
+	
+	<div id="footer">
+	<div class="rside">&copy; Copyright 2011, Pedram Azad   <br/>  Designed by <a href="http://www.free-css-templates.com/">Free CSS Templates</a>, thanks to <a href="http://www.dubaiapartments.biz/">Dubai Villas</a>
+</div>
+	<p>
+	<a href="http://validator.w3.org/check?uri=referer" title="Validate">XHTML</a> - <a href="http://jigsaw.w3.org/css-validator/check/referer" title="Validate">CSS</a>
+	</p>
+	</div>
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5570624-1");
+pageTracker._trackPageview();
+</script>	
+	
+</body>
+</html>

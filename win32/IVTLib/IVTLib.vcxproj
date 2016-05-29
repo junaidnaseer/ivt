@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\Calibration\Calibration.h" />
+    <ClInclude Include="..\..\src\Calibration\DLTCalibration.h" />
+    <ClInclude Include="..\..\src\Calibration\ExtrinsicParameterCalculator.h" />
+    <ClInclude Include="..\..\src\Calibration\Rectification.h" />
+    <ClInclude Include="..\..\src\Calibration\StereoCalibration.h" />
+    <ClInclude Include="..\..\src\Calibration\Undistortion.h" />
+    <ClInclude Include="..\..\src\Calibration\UndistortionSimple.h" />
+    <ClInclude Include="..\..\src\Classification\NearestNeighbor.h" />
+    <ClInclude Include="..\..\src\Color\Color.h" />
+    <ClInclude Include="..\..\src\Color\ColorParameterSet.h" />
+    <ClInclude Include="..\..\src\Color\RGBColorModel.h" />
+    <ClInclude Include="..\..\src\Contours\ContourHelper.h" />
+    <ClInclude Include="..\..\src\DataProcessing\MeanFilter.h" />
+    <ClInclude Include="..\..\src\DataProcessing\Normalizer.h" />
+    <ClInclude Include="..\..\src\DataProcessing\RANSAC.h" />
+    <ClInclude Include="..\..\src\DataStructures\DynamicArray.h" />
+    <ClInclude Include="..\..\src\DataStructures\DynamicArrayTemplate.h" />
+    <ClInclude Include="..\..\src\DataStructures\DynamicArrayTemplatePointer.h" />
+    <ClInclude Include="..\..\src\DataStructures\KdTree\KdPriorityQueue.h" />
+    <ClInclude Include="..\..\src\DataStructures\KdTree\KdStructs.h" />
+    <ClInclude Include="..\..\src\DataStructures\KdTree\KdTree.h" />
+    <ClInclude Include="..\..\src\DataStructures\KdTree\KdUtils.h" />
+    <ClInclude Include="..\..\src\Features\FeatureEntry.h" />
+    <ClInclude Include="..\..\src\Features\FeatureSet.h" />
+    <ClInclude Include="..\..\src\Features\HarrisSIFTFeatures\HarrisSIFTFeatureCalculator.h" />
+    <ClInclude Include="..\..\src\Features\PatchFeatures\PatchFeatureEntry.h" />
+    <ClInclude Include="..\..\src\Features\SIFTFeatures\SIFTFeatureCalculator.h" />
+    <ClInclude Include="..\..\src\Features\SIFTFeatures\SIFTFeatureEntry.h" />
+    <ClInclude Include="..\..\src\Helpers\BasicFileIO.h" />
+    <ClInclude Include="..\..\src\Helpers\Configuration.h" />
+    <ClInclude Include="..\..\src\Helpers\helpers.h" />
+    <ClInclude Include="..\..\src\Helpers\OptimizedFunctions.h" />
+    <ClInclude Include="..\..\src\Helpers\OptimizedFunctionsList.h" />
+    <ClInclude Include="..\..\src\Helpers\PerformanceLib.h" />
+    <ClInclude Include="..\..\src\Helpers\Quicksort.h" />
+    <ClInclude Include="..\..\src\Helpers\Timer.h" />
+    <ClInclude Include="..\..\src\Image\BitmapFont.h" />
+    <ClInclude Include="..\..\src\Image\ByteImage.h" />
+    <ClInclude Include="..\..\src\Image\CornerSubpixel.h" />
+    <ClInclude Include="..\..\src\Image\FloatImage.h" />
+    <ClInclude Include="..\..\src\Image\ImageMapper.h" />
+    <ClInclude Include="..\..\src\Image\ImageProcessor.h" />
+    <ClInclude Include="..\..\src\Image\IntImage.h" />
+    <ClInclude Include="..\..\src\Image\PrimitivesDrawer.h" />
+    <ClInclude Include="..\..\src\Image\ShortImage.h" />
+    <ClInclude Include="..\..\src\Image\StereoMatcher.h" />
+    <ClInclude Include="..\..\src\Image\StereoVision.h" />
+    <ClInclude Include="..\..\src\Interfaces\ApplicationHandlerInterface.h" />
+    <ClInclude Include="..\..\src\Interfaces\ClassificatorInterface.h" />
+    <ClInclude Include="..\..\src\Interfaces\FeatureCalculatorInterface.h" />
+    <ClInclude Include="..\..\src\Interfaces\FilterInterface.h" />
+    <ClInclude Include="..\..\src\Interfaces\GUIInterface.h" />
+    <ClInclude Include="..\..\src\Interfaces\MainWindowEventInterface.h" />
+    <ClInclude Include="..\..\src\Interfaces\MainWindowInterface.h" />
+    <ClInclude Include="..\..\src\Interfaces\ObjectClassifierInterface.h" />
+    <ClInclude Include="..\..\src\Interfaces\ObjectEntryFilterInterface.h" />
+    <ClInclude Include="..\..\src\Interfaces\RegionFilterInterface.h" />
+    <ClInclude Include="..\..\src\Interfaces\RigidObjectTrackingInterface.h" />
+    <ClInclude Include="..\..\src\Interfaces\VideoCaptureInterface.h" />
+    <ClInclude Include="..\..\src\Interfaces\WindowEventInterface.h" />
+    <ClInclude Include="..\..\src\Math\Constants.h" />
+    <ClInclude Include="..\..\src\Math\DoubleMatrix.h" />
+    <ClInclude Include="..\..\src\Math\DoubleVector.h" />
+    <ClInclude Include="..\..\src\Math\FloatMatrix.h" />
+    <ClInclude Include="..\..\src\Math\FloatVector.h" />
+    <ClInclude Include="..\..\src\Math\LinearAlgebra.h" />
+    <ClInclude Include="..\..\src\Math\Matd.h" />
+    <ClInclude Include="..\..\src\Math\Math2d.h" />
+    <ClInclude Include="..\..\src\Math\Math3d.h" />
+    <ClInclude Include="..\..\src\Math\Vecd.h" />
+    <ClInclude Include="..\..\src\Networking\TCPSocket.h" />
+    <ClInclude Include="..\..\src\Networking\VCNet.h" />
+    <ClInclude Include="..\..\src\ObjectFinder\CompactRegionFilter.h" />
+    <ClInclude Include="..\..\src\ObjectFinder\ObjectColorSegmenter.h" />
+    <ClInclude Include="..\..\src\ObjectFinder\ObjectFinder.h" />
+    <ClInclude Include="..\..\src\ObjectFinder\ObjectFinderStereo.h" />
+    <ClInclude Include="..\..\src\ParticleFilter\ParticleFilterFramework.h" />
+    <ClInclude Include="..\..\src\ParticleFilter\ParticleFilterFrameworkFloat.h" />
+    <ClInclude Include="..\..\src\Structs\ObjectDefinitions.h" />
+    <ClInclude Include="..\..\src\Structs\Structs.h" />
+    <ClInclude Include="..\..\src\Threading\Event.h" />
+    <ClInclude Include="..\..\src\Threading\Mutex.h" />
+    <ClInclude Include="..\..\src\Threading\Thread.h" />
+    <ClInclude Include="..\..\src\Threading\ThreadBase.h" />
+    <ClInclude Include="..\..\src\Threading\Threading.h" />
+    <ClInclude Include="..\..\src\Threading\WindowsThread.h" />
+    <ClInclude Include="..\..\src\Tracking\ICP.h" />
+    <ClInclude Include="..\..\src\Tracking\KLTTracker.h" />
+    <ClInclude Include="..\..\src\Tracking\ObjectPose.h" />
+    <ClInclude Include="..\..\src\Tracking\POSIT.h" />
+    <ClInclude Include="..\..\src\Tracking\RAPiD.h" />
+    <ClInclude Include="..\..\src\Tracking\Tracker2d3d.h" />
+    <ClInclude Include="..\..\src\VideoAccess\VideoReader.h" />
+    <ClInclude Include="..\..\src\VideoCapture\BitmapCapture.h" />
+    <ClInclude Include="..\..\src\VideoCapture\BitmapSequenceCapture.h" />
+    <ClInclude Include="..\..\src\VideoCapture\OpenGLCapture.h" />
+    <ClInclude Include="..\..\src\VideoCapture\UncompressedAVICapture.h" />
+    <ClInclude Include="..\..\src\VideoCapture\VFWCapture.h" />
+    <ClInclude Include="..\..\src\Visualizer\glext.h" />
+    <ClInclude Include="..\..\src\Visualizer\OpenGLVisualizer.h" />
+    <ClInclude Include="..\..\src\Visualizer\OpenGLVisualizerControl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Calibration\Calibration.cpp" />
+    <ClCompile Include="..\..\src\Calibration\DLTCalibration.cpp" />
+    <ClCompile Include="..\..\src\Calibration\ExtrinsicParameterCalculator.cpp" />
+    <ClCompile Include="..\..\src\Calibration\Rectification.cpp" />
+    <ClCompile Include="..\..\src\Calibration\StereoCalibration.cpp" />
+    <ClCompile Include="..\..\src\Calibration\Undistortion.cpp" />
+    <ClCompile Include="..\..\src\Calibration\UndistortionSimple.cpp" />
+    <ClCompile Include="..\..\src\Classification\NearestNeighbor.cpp" />
+    <ClCompile Include="..\..\src\Color\Color.cpp" />
+    <ClCompile Include="..\..\src\Color\ColorParameterSet.cpp" />
+    <ClCompile Include="..\..\src\Color\RGBColorModel.cpp" />
+    <ClCompile Include="..\..\src\Contours\ContourHelper.cpp" />
+    <ClCompile Include="..\..\src\DataProcessing\MeanFilter.cpp" />
+    <ClCompile Include="..\..\src\DataProcessing\Normalizer.cpp" />
+    <ClCompile Include="..\..\src\DataProcessing\RANSAC.cpp" />
+    <ClCompile Include="..\..\src\DataStructures\DynamicArray.cpp" />
+    <ClCompile Include="..\..\src\DataStructures\KdTree\KdTree.cpp" />
+    <ClCompile Include="..\..\src\Features\FeatureSet.cpp" />
+    <ClCompile Include="..\..\src\Features\HarrisSIFTFeatures\HarrisSIFTFeatureCalculator.cpp" />
+    <ClCompile Include="..\..\src\Features\PatchFeatures\PatchFeatureEntry.cpp" />
+    <ClCompile Include="..\..\src\Features\SIFTFeatures\SIFTFeatureCalculator.cpp" />
+    <ClCompile Include="..\..\src\Helpers\BasicFileIO.cpp" />
+    <ClCompile Include="..\..\src\Helpers\Configuration.cpp" />
+    <ClCompile Include="..\..\src\Helpers\helpers.cpp" />
+    <ClCompile Include="..\..\src\Helpers\PerformanceLib.cpp" />
+    <ClCompile Include="..\..\src\Helpers\Quicksort.cpp" />
+    <ClCompile Include="..\..\src\Helpers\Timer.cpp" />
+    <ClCompile Include="..\..\src\Image\BitmapFont.cpp" />
+    <ClCompile Include="..\..\src\Image\ByteImage.cpp" />
+    <ClCompile Include="..\..\src\Image\CornerSubpixel.cpp" />
+    <ClCompile Include="..\..\src\Image\FloatImage.cpp" />
+    <ClCompile Include="..\..\src\Image\ImageMapper.cpp" />
+    <ClCompile Include="..\..\src\Image\ImageProcessor.cpp" />
+    <ClCompile Include="..\..\src\Image\IntImage.cpp" />
+    <ClCompile Include="..\..\src\Image\PrimitivesDrawer.cpp" />
+    <ClCompile Include="..\..\src\Image\ShortImage.cpp" />
+    <ClCompile Include="..\..\src\Image\StereoMatcher.cpp" />
+    <ClCompile Include="..\..\src\Image\StereoVision.cpp" />
+    <ClCompile Include="..\..\src\Math\DoubleMatrix.cpp" />
+    <ClCompile Include="..\..\src\Math\DoubleVector.cpp" />
+    <ClCompile Include="..\..\src\Math\FloatMatrix.cpp" />
+    <ClCompile Include="..\..\src\Math\FloatVector.cpp" />
+    <ClCompile Include="..\..\src\Math\LinearAlgebra.cpp" />
+    <ClCompile Include="..\..\src\Math\Matd.cpp" />
+    <ClCompile Include="..\..\src\Math\Math2d.cpp" />
+    <ClCompile Include="..\..\src\Math\Math3d.cpp" />
+    <ClCompile Include="..\..\src\Math\SVD.cpp" />
+    <ClCompile Include="..\..\src\Math\Vecd.cpp" />
+    <ClCompile Include="..\..\src\Networking\TCPSocket.cpp" />
+    <ClCompile Include="..\..\src\ObjectFinder\CompactRegionFilter.cpp" />
+    <ClCompile Include="..\..\src\ObjectFinder\ObjectColorSegmenter.cpp" />
+    <ClCompile Include="..\..\src\ObjectFinder\ObjectFinder.cpp" />
+    <ClCompile Include="..\..\src\ObjectFinder\ObjectFinderStereo.cpp" />
+    <ClCompile Include="..\..\src\ParticleFilter\ParticleFilterFramework.cpp" />
+    <ClCompile Include="..\..\src\ParticleFilter\ParticleFilterFrameworkFloat.cpp" />
+    <ClCompile Include="..\..\src\Threading\Event.cpp" />
+    <ClCompile Include="..\..\src\Threading\Mutex.cpp" />
+    <ClCompile Include="..\..\src\Threading\Threading.cpp" />
+    <ClCompile Include="..\..\src\Threading\WindowsThread.cpp" />
+    <ClCompile Include="..\..\src\Tracking\ICP.cpp" />
+    <ClCompile Include="..\..\src\Tracking\KLTTracker.cpp" />
+    <ClCompile Include="..\..\src\Tracking\ObjectPose.cpp" />
+    <ClCompile Include="..\..\src\Tracking\POSIT.cpp" />
+    <ClCompile Include="..\..\src\Tracking\RAPiD.cpp" />
+    <ClCompile Include="..\..\src\Tracking\Tracker2d3d.cpp" />
+    <ClCompile Include="..\..\src\VideoAccess\VideoReader.cpp" />
+    <ClCompile Include="..\..\src\VideoCapture\BitmapCapture.cpp" />
+    <ClCompile Include="..\..\src\VideoCapture\BitmapSequenceCapture.cpp" />
+    <ClCompile Include="..\..\src\VideoCapture\OpenGLCapture.cpp" />
+    <ClCompile Include="..\..\src\VideoCapture\UncompressedAVICapture.cpp" />
+    <ClCompile Include="..\..\src\VideoCapture\VFWCapture.cpp" />
+    <ClCompile Include="..\..\src\Visualizer\OpenGLVisualizer.cpp" />
+    <ClCompile Include="..\..\src\Visualizer\OpenGLVisualizerControl.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{738DC9B7-E440-412F-9E14-3D8D776236FA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>IVTLib</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../src</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(OutDir)$(TargetName)$(TargetExt)" "..\..\lib\win32\ivtd.lib"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../src</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(OutDir)$(TargetName)$(TargetExt)" "..\..\lib\win32\ivt.lib"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

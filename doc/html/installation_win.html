@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>IVT - Integrating Vision Toolkit - Installation</title>
+	<meta http-equiv="Content-Language" content="English" />
+	<meta name="Robots" content="index,follow" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+</head>
+<body>
+
+<div id="wrap">
+
+	<div id="top">
+				<div class="rights">	</div>
+				<div id="search">
+						
+					</div>
+				<div class="lefts">
+					<h1>IVT - Installation</h1>
+					<h2>Integrating Vision Toolkit</h2>
+				</div>
+	</div>
+	
+	<div id="topmenu">
+				<div class="rights"></div>
+				<div class="lefts">
+					<ul>
+						<li><a href="index.html" title="home">HOME</a></li>
+						<li><a href="installation.html" title="Installation">INSTALLATION</a></li>
+						<li><a href="doxygen/index.html" title="Documentation">DOCUMENTATION</a></li>
+						<li><a href="examples.html" title="Examples">EXAMPLES</a></li>
+						<li><a href="book.html" title="Book">BOOK</a></li>
+						<li><a href="highspeed.html" title="Highspeed">HIGHSPEED</a></li>
+						<li><a href="services.html" title="Services">SERVICES / SUPPORT</a></li>
+						<li><a href="contact.html" title="Contact">CONTACT</a></li>
+						<li><a href="about.html" title="About">ABOUT</a></li>
+					</ul>
+				</div>
+	</div>
+
+	<div class="section">
+		This tutorial describes the setup of a ready-to-use environment for programming with the IVT library under Windows.<br /><br />
+
+			<table border="0" width="100%">
+				<colgroup>
+					<col width="200" />
+					<col width="*" />
+				</colgroup>
+				<tr>
+					<td>
+						<img src="images/windows_logo.png" alt="Windows Logo" />
+					</td>
+					<td>
+						<ol>
+							<li><a href="#windows_ivt">Setting up IVT</a></li>
+							<li><a href="#windows_1394">Optional: Setting up CMU1394</a></li>
+						</ol>
+					</td>
+				</tr>
+			</table>
+	</div>
+	<div class="main_full">
+		<div class="leftside_full">
+			<a name="windows_ivt"></a>
+			<h2>1. Setting up IVT</h2><br />
+
+			<h4>1.1. Downloading the IVT</h4>
+				<p>
+					Download the newest version of the IVT, e.g. <code>ivt-1.3.7.zip</code>, at <a href="http://sourceforge.net/projects/ivt/">http://sourceforge.net/projects/ivt/</a> in the download area.
+				</p>
+				<br />
+
+			<h4>1.2. Unpacking</h4>
+				<p>
+					The downloaded zip file can be unpacked into any directory. In the following, it is assumed that this directory is <code>C:\Program Files</code>. After extraction, the subdirectories <code>doc, examples, files, lib, src</code> and <code>win32</code> can be found in <code>C:\Program Files\IVT</code>.
+				</p>
+				<br />
+
+			<h4>1.3. Settings in the development environment</h4>
+				<p>
+					The directory paths for the include and library files must be set in the development environment.<br />
+					The include files are located in the subdirectory <code>src</code> of the IVT directory (i.e. <code>C:\Program Files\IVT\src</code>).<br />
+					The library files are located in the subdirectory <code>lib</code> of the IVT directory (e.g. <code>C:\Program Files\IVT\lib\win32</code>).<br />
+				</p>
+				<br />
+
+			<h4>1.4. Building the libraries</h4>
+				<p>
+					The workspace file <code>IVT.dsw</code> for Microsoft Visual C++ 6.0 is located in the directory <code>win32\IVTLib</code>. If this file is opened in a newer version of Microsoft Visual C++, then an automatic conversion into a new file format takes place and the workspace can be used likewise. Once opened, the version of the library that is to be built can be selected in the menu <i>Build</i> using the menu option <i>Set Active Configuration...</i>.
+				</p>
+				<p style="text-align:center">
+					<img src="images/vcplusplus7.png" alt="VC++ Image 7" /><br />
+					Dialog window for the configuration of the active project.
+				</p>
+				<br />
+				<p>
+					The following versions are available:<br />
+				</p>
+				<ul style="margin:17px">
+					<li>
+						<b>IVTLib - Win32 Release</b><br />
+						This is the core of the IVT library. Debug information is not included. The file name of the library file is <code>ivt.lib</code>.
+					</li>
+					<li>
+						<b>IVTLib - Win32 Debug</b><br />
+						The debug version permits step-by-step execution of the functions within the IVT library during debugging. Usually applications that are compiled with the debug version are noticeably slower throughout execution. The library to be generated has the file name <code>ivtd.lib</code>.
+					</li>
+					<li>
+						<b>IVTWin32GUILib - Win32 Release</b><br />
+						With this selection, a further library is built. This is an extension to the standard version of the IVT library, which contains support for graphical user interface under Windows. The file name of the library is <code>ivtwin32gui.lib</code>.
+					</li>
+					<li>
+						<b>IVTWin32GUILib - Win32 Debug</b><br />
+						The debug version of the extension library again permits the debugging within the IVT source code. The file name of the debug version is <code>ivtwin32guid.lib</code>.
+					</li>
+				</ul>
+				The respective library file can be built after chosing it via the menu <i>Build</i> and the appropriate menu option (i.e. <i>Build ivt.lib</i>). After the build process is finished, the generated library file (e.g. <code>ivt.lib</code>) is located in the subdirectory <code>IVT\lib\win32</code>. In order to be able to later faultlessly compile and link all applications with the IVT, all four library files of the IVT should be built.
+				<br /><br />
+
+			<h4>1.5. Example application</h4>
+				<p>
+					For checking the installation, and as an introduction to programming with the IVT, a suitable example application is SimpleApp. This is the simplest of the numerous example applications contained in the IVT. The workspace file <code>SimpleApp.dsw</code> is located in the IVT subdirectory <code>win32\SimpleApp</code>.
+					After having opened it in Microsoft Visual C++, the application should be compiled without any errors via the menu item <i>Build SimpleApp.exe</i> from the menu <i>Build</i>.
+					If a problem occurs, first it should verified which version has been selected in the menu <i>Build</i> under the menu item <i>Set Active Configuration...</i>, and whether the according IVT library file was built in the previous step. The example applications are configured for the debug version of the IVT library.
+				</p>
+				<p>
+					Before the application is executed, an image file should be set as program argument. The program arguments can be added in <i>Project settings</i>. To get there, go to menu <i>Project</i> and choose the menu item <i>Settings...</i>. On the tab <i>Debug</i>, <code>..\..\files\scene_left.bmp</code> can be set as program argument, for example. This path points to an image file, which is contained in the subdirectory <code>files</code> of the IVT.
+				</p><br/>
+				<p style="text-align:center">
+					<img src="images/vcplusplus5.png" alt="VC++ Image 5" /><br />
+					Dialog window for the project settings.
+				</p>
+				<br />
+				<p>
+					If the application is now executed from the menu <i>Build</i> and the menu item <i>Execute SimpleApp.exe</i>, the result <i>output written to file 'output.bmp'</i> is printed in the console window. Subsequently, the file <code>output.bmp</code> is located in the same directory as the workspace file <code>SimpleApp.dsw</code> i.e. in <code>win32\SimpleApp</code> in the IVT directory.<br /><br />
+					If up to here all steps have been accomplished, and the example applications could be compiled and executed, then a ready-to-use environment for programming with the IVT has been set up.
+				</p>
+				<br /><br />
+
+
+			<a name="windows_1394"></a>
+			<h2>2. Optional: Setting up CMU1394</h2><br />
+
+			<h4>2.1. Downloading CMU1394</h4>
+				<p>
+					The setup version of the CMU1394 driver is found in the download area at <a href="http://www.cs.cmu.edu/~iwan/1394/">http://www.cs.cmu.edu/~iwan/1394/</a>. We recommend version 6.4.5, since compatibility of this version with the IVT has been ensured by various tests.
+				</p>
+				<br />
+
+			<h4>2.2. Installation</h4>
+				<p>
+					Executing the downloaded file starts a setup procedure. During the setup, the components to be installed, as well as the target directory of the installation can be selected. Here, make particularly sure that the component <i>Development Files</i> is installed. The default directory for the installation is <code>C:\Program Files\CMU\1394Camera</code>.
+				</p>
+				<p style="text-align:center">
+					<img src="images/vcplusplus8.png" alt="VC++ Image 8" /><br />
+					Setup of the CMU1394 driver.
+				</p>
+				<br />
+
+			<h4>2.3. Settings in the development environment</h4>
+				<p>
+					The directory paths for the development environment are as follows:<br /><br />
+					Path for the include files:<br />
+					<code>C:\Program Files\CMU\1394Camera\include</code><br />
+					Path for the library files:<br />
+					<code>C:\Program Files\CMU\1394Camera\lib</code><br /><br />
+				</p>
+				<br /><br />
+		</div>
+	</div>
+
+	<div id="footer">
+	<div class="rside">&copy; Copyright 2011, Pedram Azad   <br/>  Designed by <a href="http://www.free-css-templates.com/">Free CSS Templates</a>, thanks to <a href="http://www.dubaiapartments.biz/">Dubai Villas</a>
+</div>
+	<p>
+	<a href="http://validator.w3.org/check?uri=referer" title="Validate">XHTML</a> - <a href="http://jigsaw.w3.org/css-validator/check/referer" title="Validate">CSS</a>
+	</p>
+	</div>
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5570624-1");
+pageTracker._trackPageview();
+</script>	
+	
+</body>
+</html>

@@ -1,0 +1,31 @@
+This is the release of version 1.3.22 of the IVT.
+
+Changes:
+
+- IVT/src/Image/ByteImage.cpp:
+  In CByteImage::SaveToFile(...) initialized padding bytes so that valgrind will not print
+  out "uninitialized bytes". This was not a bug, as the padding bytes are not used and do 
+  not have to contain valid data.
+
+- IVT/src/Image/ImageProcessor.cpp:
+  Added check for all Gaussian filters that image must be at least as large as the kernel size.
+
+- IVT/src/Math/LinearAlgebra.cpp:
+  In CLinearAlgebra::DetermineAffineTransformation(...) and CLinearAlgebra::DetermineHomography(...)
+  handling result value of SolveLinearLeastSquaresSimple(...) now.
+
+- IVT/src/Structs/ObjectDefinitions.h:
+  Added localizationFlag to struct Object3DEntry.
+  Changed order of colors in ObjectColor and added eNumberOfColors at the end.
+
+- IVT/examples/HSVColorSegmentationApp/src/ObjetFinderOrganizer.cpp:
+  Adapted to changes in ObjectColor.
+
+- IVT/src/ObjectFinder/CompactRegionFilter.cpp:
+  Small fixed parameter change in CCompactRegionFilter::CheckRegion(...).
+
+- IVT/src/VideoCapture/Linux1394Capture2.cpp:
+  Added CLinux1394Capture2::GetVideoMode(...) and CLinux1394Capture2::GetFrameRate(...)
+  and applied some improvments.
+
+- Non-functional modifications to avoid warnings.

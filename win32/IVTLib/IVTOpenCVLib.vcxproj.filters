@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Image">
+      <UniqueIdentifier>{d788b1f3-007a-44ee-99c0-7be23827ab8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Calibration">
+      <UniqueIdentifier>{2cfcfd80-a9fa-4be3-a230-2f7f8323d2e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{d3ab9020-5ea1-4f82-96c0-aaafbaf7112a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ObjectFinder">
+      <UniqueIdentifier>{9ad7aee1-abe3-4f5d-bc8b-ba84845786ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VideoAccess">
+      <UniqueIdentifier>{efdf026c-c7e2-4f10-b1df-5ffb02ac8ee1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VideoCapture">
+      <UniqueIdentifier>{dce55ef1-04f3-4081-b1a6-467948e373bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui">
+      <UniqueIdentifier>{b68831e4-eb20-4309-991d-46a148836af6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Image\IplImageAdaptor.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Image\PrimitivesDrawerCV.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Image\ImageAccessCV.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Image\ImageProcessorCV.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Calibration\ExtrinsicParameterCalculatorCV.cpp">
+      <Filter>Calibration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Calibration\StereoCalibrationCV.cpp">
+      <Filter>Calibration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Math\LinearAlgebraCV.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ObjectFinder\HaarClassifierCV.cpp">
+      <Filter>ObjectFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\VideoAccess\VideoWriterCV.cpp">
+      <Filter>VideoAccess</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\VideoCapture\OpenCVCapture.cpp">
+      <Filter>VideoCapture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\gui\OpenCVApplicationHandler.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\gui\OpenCVWindow.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\Image\IplImageAdaptor.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Image\PrimitivesDrawerCV.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Image\ImageAccessCV.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Image\ImageProcessorCV.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Calibration\StereoCalibrationCV.h">
+      <Filter>Calibration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Calibration\ExtrinsicParameterCalculatorCV.h">
+      <Filter>Calibration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Math\LinearAlgebraCV.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ObjectFinder\HaarClassifierCV.h">
+      <Filter>ObjectFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\VideoAccess\VideoWriterCV.h">
+      <Filter>VideoAccess</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\VideoCapture\OpenCVCapture.h">
+      <Filter>VideoCapture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\gui\OpenCVWindow.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\gui\OpenCVApplicationHandler.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
